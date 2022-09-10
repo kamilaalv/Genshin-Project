@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+
+    <title>Genshin | Ultimate Character Ascension Guide</title>
+  </head>
+  <body>
+    <style>
+       .monthlyBanner {
+        background-image: url("Images/Character Icons/SayuBg.jpg");
+      }
+      .showcase {
+        width: 80%;
+        background-color: rgb(77, 77, 77);
+        height: 100%;
+        border-radius: 20px;
+        margin: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Eula Banner */
+      .character-banner {
+        width: 300px;
+        padding: 50px;
+        position: relative;
+      }
+
+      .character-banner a img:nth-of-type(1) {
+        background-image: url("Images/general stuff/Background_Item_5_Star.webp");
+        border-radius: 15px;
+        width: 250px;
+        height: 250px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
+        transition: box-shadow 0.3s;
+      }
+
+      .character-banner a img:nth-of-type(2) {
+        position: absolute;
+        top: 30px;
+        right: -10px;
+        width: 60px;
+        height: 60px;
+        background-image: url("Images/general stuff/Background_Item_5_Star.webp");
+        border-radius: 100px;
+        padding: 3px;
+        box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
+      }
+
+      .character-banner a h2 {
+        width: 250px;
+        text-align: center;
+        color: white;
+        font-weight: normal;
+        font-size: 2rem;
+      }
+
+      .Estars {
+        padding: 5px;
+        width: 250px;
+      }
+
+      .ewh2 {
+        width: 250px;
+        text-align: center;
+        padding: 5px;
+      }
+    </style>
+
+    <!--Logo-->
+    <div class="logo flex">
+      <img src="images/Genshin_Impact_logo_white.png" alt="logo" />
+    </div>
+
+    <!--Navbar-->
+    <div class="navbar">
+      <div class="container flex">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="characters.html">Characters</a></li>
+            <li><a href="weapons.html">Game</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Banner-->
+    <div class="monthlyBanner">
+      <div class="flex">
+        <img
+          src="Images/Character Icons/Character_Xiao_Full_Wish2.png"
+          alt=""
+          id="currentBannerCharacter"
+        />
+        <div class="characterNamecard">
+          <img
+            class="currentElement"
+            src="Images/general stuff/Element_AnemoGlow.png"
+            alt=""
+          />
+          <h2>Xiao</h2>
+          <div class="characterNamecardBg">
+            <div class="characterNamecardStars flex">
+              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+              <img
+                src="Images/general stuff/Icon_1_Star.webp"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <h1>Vigilant Yaksha</h1>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="showcase">
+        <div class="character-banner">
+          <a href="">
+            <img src="Images/Character Icons/Xiao.png" alt="" />
+            <img src="Images/general stuff/Element_Anemo.png" alt="" />
+            <h2>Xiao</h2>
+          </a>
+          <div class="Estars flex">
+            <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+            <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+            <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+            <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
+            <img
+              class="lastStar"
+              src="Images/general stuff/Icon_1_Star.webp"
+              alt=""
+            />
+          </div>
+          <h2 class="ewh2">Polearm</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

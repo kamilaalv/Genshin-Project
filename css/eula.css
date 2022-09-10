@@ -1,0 +1,157 @@
+.monthlyBanner {
+    background-image: url("../Images/Character Icons/RosariaBg.jpg");
+  }
+
+   /* Grid */
+  .parentShowcase {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4, 1fr);
+    
+  }
+  .showcase {    /* showcase is a gray background */
+   
+    background-color: rgb(77, 77, 77);
+    border-radius: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showcase:nth-of-type(1) {
+    grid-area: 1/1/5/2;
+  }
+
+  .showcase:nth-of-type(2) {
+    grid-area:1/2/5/5;
+    padding: 10px;
+    }
+  /* Eula Side Banner */
+  .character-banner {
+    padding: 50px;
+    position: relative;
+  }
+
+  .char.flex {
+      flex-direction: column;
+      margin: 10px;
+  }
+
+  .character-banner .char img:nth-of-type(1) {
+    background-image: url("../Images/general stuff/Background_Item_5_Star.webp");
+    border-radius: 80%;
+    width: 80%;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
+    transition: box-shadow 0.3s;
+  }
+
+  .character-banner .char img:nth-of-type(2) {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    width: 15%;
+    background-image: url("../Images/general stuff/Background_Item_5_Star.webp");
+    border-radius: 100px;
+    padding: 3px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
+  }
+
+  .character-banner h2 {
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 1.5rem;
+  }
+
+  .Estars {
+    padding: 5px;
+    width: 250px;
+  }
+
+  .character-banner .label {
+    font-size:1.25rem;
+    color:rgb(165, 165, 165);
+  }
+ 
+.characterBio{
+  margin-top: 10px;
+  padding: 10px;
+}
+  .characterBio .label {
+    display:inline-block;
+
+    width: 45%;
+  }
+  .characterBio .value {
+    display:inline-block;
+    width: 55%;
+  }
+  .characterBio .value, .characterBio .label{
+    font-size: 0.95rem;
+    margin: 5px 0px;
+  }
+
+/* showcase 2 */
+/* Character Ascention Menu */
+.ascensionMenu .stat {
+  max-width: 155px;;
+  min-width: 75px;
+  padding: 2px;
+  margin: 7px;
+  border-radius: 15px;
+  font-size: calc(1.6vw - 4px);
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.1s ease-in;
+}
+
+.ascensionMenu .stat:hover {
+  transform: translateY(-10px);
+}
+.ascensionMenu .stat:nth-of-type(1),  .ascensionMenu .stat:nth-of-type(4){
+  background-color:#71bdd5;
+  border: 1px solid #538fa1;
+  border-width: 0 0 3px;
+}
+.ascensionMenu .stat:nth-of-type(2), .ascensionMenu .stat:nth-of-type(5) {
+  background-color:
+  #89ce75;
+  border: 1px solid #699e5a;
+  border-width: 0 0 3px;
+}
+/*.ascensionMenu .stat:nth-of-type(5) {
+ background-color:#ffdd37;
+}*/
+.ascensionMenu .stat:nth-of-type(3) {
+  background-color:#c176dd;
+  border: 1px solid #9e60b4;
+  border-width: 0 0 3px;
+}
+.ascensionMenu .stat img{
+  width: 50%;
+}
+.ascensionMenu .stat.selected{
+  border: 1px solid #538fa1;
+  border-width: 0 0 6px;
+  }
+
+@media(max-width:1115px){
+  .ascensionMenu .stat span {
+   display: none;
+  }
+  .parentShowcase {
+    display:flex;
+    flex-direction: column;
+  }
+  .showcase:nth-of-type(1) { /*make a sidebar will be openned when a button is pressed, over showcase 2  */
+    display: none;
+  }
+
+  
+}
+
+
+
+
