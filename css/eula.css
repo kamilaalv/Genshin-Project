@@ -96,11 +96,12 @@
 /* showcase 2 */
 /* Character Ascention Menu */
 .ascensionMenu .stat {
-  max-width: 155px;;
+  max-width: 200px;
   min-width: 75px;
   padding: 2px;
   margin: 7px;
   border-radius: 15px;
+
   font-size: calc(1.6vw - 4px);
   flex-direction: column;
   cursor: pointer;
@@ -140,6 +141,10 @@
 @media(max-width:1115px){
   .ascensionMenu .stat span {
    display: none;
+  }
+
+  .ascensionMenu .stat {
+    max-width: 150px;
   }
   .parentShowcase {
     display:flex;

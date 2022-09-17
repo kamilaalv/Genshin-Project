@@ -6,7 +6,7 @@ var characters = [
   "Sayu Wish2.png",
 ];
 var backgrounds = ["AyakaBg.jpg", "RazorBg.jpg", "RosariaBg.jpg", "SayuBg.jpg"];
-var h2s = ["Ayaka", "Razor", "Rosaria", "Sayu"];
+var h2s = ["Kamisato Ayaka", "Razor", "Rosaria", "Sayu"];
 var h1s = [
   "Frostflake Heron",
   "Wolf Boy",
@@ -24,7 +24,7 @@ function changeBanner(ind) {
   var character = document.querySelector("#currentBannerCharacter");
   var background = document.querySelector(".monthlyBanner");
   var h1 = document.querySelector(".monthlyBanner h1");
-  var h2 = document.querySelector(" .namecard h2 ");
+  var h2 = document.querySelector(" .characterNamecard h2 ");
   var element = document.querySelector(".currentElement");
   var star = document.querySelector(".lastStar");
 
