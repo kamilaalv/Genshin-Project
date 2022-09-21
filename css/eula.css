@@ -1,5 +1,5 @@
 .monthlyBanner {
-    background-image: url("/Images/Character Icons/RosariaBg.jpg");
+    background-image: url("../Images/Character Icons/RosariaBg.jpg");
   }
 
    /* Grid */
@@ -40,7 +40,7 @@
   }
 
   .character-banner .char img:nth-of-type(1) {
-    background-image: url("/Images/general stuff/Background_Item_5_Star.webp");
+    background-image: url("../Images/general stuff/Background_Item_5_Star.webp");
     border-radius: 80%;
     width: 80%;
     box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
@@ -52,7 +52,7 @@
     top: 60px;
     right: 70px;
     width: 15%;
-    background-image: url("/Images/general stuff/Background_Item_5_Star.webp");
+    background-image: url("../Images/general stuff/Background_Item_5_Star.webp");
     border-radius: 100px;
     padding: 3px;
     box-shadow: 0 3px 6px rgb(0 0 0 / 23%), 0 3px 6px rgb(0 0 0 / 16%);
