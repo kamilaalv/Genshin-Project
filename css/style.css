@@ -1,11 +1,11 @@
 @font-face {
     font-family: GenshinFont1;
-    src: url('./Fonts/zh-cn.ttf');
+    src: url('../Fonts/zh-cn.ttf');
 }
 
 @font-face {
     font-family: GenshinFont2;
-    src: url('./Fonts/ja-jp.ttf');
+    src: url('../Fonts/ja-jp.ttf');
 }
 
 :root {
