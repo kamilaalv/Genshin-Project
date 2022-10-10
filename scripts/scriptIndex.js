@@ -112,6 +112,13 @@ let charactersInfo = [
     star: 4,
   },
   {
+    name: "Candace",
+    image: "Candace.png",
+    element: "Hydro",
+    weapon: "Polearm",
+    star: 4,
+  },
+  {
     name: "Childe",
     image: "Childe.png",
     element: "Hydro",
@@ -126,6 +133,20 @@ let charactersInfo = [
     star: 4,
   },
   {
+    name: "Collei",
+    image: "Collei.png",
+    element: "Dendro",
+    weapon: "Bow",
+    star: 4,
+  },
+  {
+    name: "Cyno",
+    image: "Cyno.png",
+    element: "Electro",
+    weapon: "Polearm",
+    star: 5,
+  },
+  {
     name: "Diluc",
     image: "Diluc.png",
     element: "Pyro",
@@ -137,6 +158,13 @@ let charactersInfo = [
     image: "Diona.png",
     element: "Cryo",
     weapon: "Bow",
+    star: 4,
+  },
+  {
+    name: "Dori",
+    image: "Dori.png",
+    element: "Electro",
+    weapon: "Claymore",
     star: 4,
   },
   {
@@ -165,6 +193,13 @@ let charactersInfo = [
     image: "Gorou.png",
     element: "Geo",
     weapon: "Bow",
+    star: 4,
+  },
+  {
+    name: "Heizou",
+    image: "Heizou.png",
+    element: "Anemo",
+    weapon: "Catalyst",
     star: 4,
   },
   {
@@ -222,6 +257,13 @@ let charactersInfo = [
     element: "Hydro",
     weapon: "Catalyst",
     star: 5,
+  },
+  {
+    name: "Kuki Shinobu",
+    image: "Kuki.png",
+    element: "Electro",
+    weapon: "Sword",
+    star: 4,
   },
   {
     name: "Lisa",
@@ -315,6 +357,13 @@ let charactersInfo = [
     star: 4,
   },
   {
+    name: "Tighnari",
+    image: "Tighnari.png",
+    element: "Dendro",
+    weapon: "Bow",
+    star: 5,
+  },
+  {
     name: "Venti",
     image: "Venti.png",
     element: "Anemo",
@@ -362,6 +411,13 @@ let charactersInfo = [
     element: "Pyro",
     weapon: "Catalyst",
     star: 4,
+  },
+  {
+    name: "Yelan",
+    image: "Yelan.png",
+    element: "Hydro",
+    weapon: "Bow",
+    star: 5,
   },
   {
     name: "Yoimiya",
