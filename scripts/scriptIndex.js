@@ -447,7 +447,7 @@ for (i = 0; i < charactersInfo.length; i++) {
   if (charactersInfo[i].star == 4) {
     characterGrid.innerHTML +=
       `<div class="grid-item">
-  <a href="">
+  <a href="`+ charactersInfo[i].name  +`.html">
       <img style="background-image:url( 'Images/general stuff/Background_Item_4_Star.webp');" src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">
@@ -459,45 +459,11 @@ for (i = 0; i < charactersInfo.length; i++) {
       `</h2>
   </a>
 </div>`;
-  } else {
-    if(i == 12)
-    {
+  }
+    else if(charactersInfo[i].star == 5){
       characterGrid.innerHTML +=
       `<div class="grid-item">
-  <a href="Eula.html">
-      <img src="Images/Character Icons/` +
-      charactersInfo[i].image +
-      `" alt="">
-     <img src="Images/general stuff/Element_` +
-      charactersInfo[i].element +
-      `.png" alt="">
-      <h2>` +
-      charactersInfo[i].name +
-      `</h2>
-  </a>
-</div>`;
-    }
-    else if (charactersInfo[i].name=="Xiao")
-    {
-      characterGrid.innerHTML +=
-      `<div class="grid-item">
-  <a href="xiao.html">
-      <img src="Images/Character Icons/` +
-      charactersInfo[i].image +
-      `" alt="">
-     <img src="Images/general stuff/Element_` +
-      charactersInfo[i].element +
-      `.png" alt="">
-      <h2>` +
-      charactersInfo[i].name +
-      `</h2>
-  </a>
-</div>`;
-    }
-    else{
-      characterGrid.innerHTML +=
-      `<div class="grid-item">
-  <a href="">
+      <a href="`+ charactersInfo[i].name  +`.html">
       <img src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">
@@ -511,7 +477,7 @@ for (i = 0; i < charactersInfo.length; i++) {
 </div>`;
     }
     
-  }
+  
 }
 
 //when page loads
