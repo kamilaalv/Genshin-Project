@@ -78,6 +78,13 @@ charactersInfo = [
 		star: 5,
 	  },
 	{
+		name: "Yelan",
+		image: "Yelan.png",
+		element: "Hydro",
+		weapon: "Bow",
+		star: 5,
+	  },
+	{
 	  name: "Fischl",
 	  image: "Fischl.png",
 	  element: "Electro",
@@ -181,6 +188,13 @@ charactersInfo = [
 	  element: "Geo",
 	  weapon: "Polearm",
 	  star: 5,
+	}, 
+	{
+	  name: "Heizou",
+	  image: "Heizou.png",
+	  element: "Anemo",
+	  weapon: "Catalyst",
+	  star: 5,
 	},
   ];
    /* MY PROJECT GAME */
@@ -196,24 +210,17 @@ charactersInfo = [
 	  "Element_Geo.png",
 	  "Element_Cryo.png",
 	];
-	let elementId = 0;
-	$(".prompt").append(
-	  `<h2> Find all ` +
-		elements[elementId] +
-		`</h2>` +
-		`<img src="Images/general stuff/` +
-		elementImages[elementId] +
-		`" alt="">` +
-		`<h2> characters</h2>`
-	);
+	
   
 	/* Generate Grid */
-  
-	var k = Math.floor(Math.random() * 11);
+	var len = charactersInfo.length;
+	let chars = new Set();
+	while(chars.size !== 16) {
+  		chars.add(Math.floor(Math.random() * (len - 1)) + 1);
+	}
 	let elementsCount = [0, 0, 0, 0, 0, 0];
   
-	for (i = 0; i < 16; i++) {
-	  var id = i + k;
+	for (id of chars) {
 	  $(".grid-cont").append(
 		`<div class="grid-item"` +
 		  `id="` +
@@ -251,7 +258,23 @@ charactersInfo = [
 	let myElementsCount = [0, 0, 0, 0, 0, 0];
   
 	var score = 0;
+	let elementId = 0;
+	while(elementsCount[elementId] == 0)
+	{
+	   elementId++;
+	}
+	$(".prompt").append(
+	  `<h2> Find all ` +
+		elements[elementId] +
+		`</h2>` +
+		`<img src="Images/general stuff/` +
+		elementImages[elementId] +
+		`" alt="">` +
+		`<h2> characters</h2>`
+	);
+
 	$(".grid-item").click(function () {
+		console.log(elementsCount[elementId]);
 	  var selectedId = this.id;
 	  if (charactersInfo[selectedId].element == elements[elementId]) {
 		$("#" + selectedId + " img").attr(
@@ -261,10 +284,13 @@ charactersInfo = [
 		score += 10;
 		$("#score").text("Score: " + score);
 		myElementsCount[elementId]++;
-		if (myElementsCount[elementId] == elementsCount[elementId] && elementsCount[elementId]!=0) {
+		if (myElementsCount[elementId] == elementsCount[elementId] ) {
 	 
 			elementId++;
-		 
+		 if(elementsCount[elementId] == 0)
+		 {
+			elementId++;
+		 }
 		  $(".prompt").html(
 			`<h2> Find all ` +
 			  elements[elementId] +
@@ -277,7 +303,6 @@ charactersInfo = [
 		}
 		
 	  }
-	  console.log(score);
 	  if (score == 160){
 		  $("h2").remove()
 		  $(".grid-cont").html("<h1> WIN!!! </h1>")
