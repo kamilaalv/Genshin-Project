@@ -389,9 +389,9 @@
   ];
 
    /* MY PROJECT GAME */
-  $(document).ready(function () {
-	/* Generate Prompt */
-  
+$(document).ready(function () {
+	
+	/* genral variables */
 	var elements = ["Pyro", "Hydro", "Electro","Dendro", "Anemo", "Geo", "Cryo", ];
 	var elementImages = [
 	  "Element_Pyro.png",
@@ -403,109 +403,141 @@
 	  "Element_Cryo.png",
 
 	];
-	
-  
-	/* Generate Grid */
-	var len = charactersInfo.length;
-	let chars = new Set();
-	while(chars.size !== 16) {
-  		chars.add(Math.floor(Math.random() * (len - 1)) + 1);
-	}
-	let elementsCount = [0, 0, 0, 0, 0, 0, 0];
-  
-	for (id of chars) {
-	  $(".grid-cont").append(
-		`<div class="grid-item"` +
-		  `id="` +
-		  id +
-		  `">
-			<img src="Images/Character Icons/` +
-		  charactersInfo[id].image +
-		  `" alt="">
-	  </div>`
-	  );
-	  switch (charactersInfo[id].element) {
-		case "Pyro":
-		  elementsCount[0]++;
-		  break;
-		case "Hydro":
-		  elementsCount[1]++;
-		  break;
-		case "Electro":
-		  elementsCount[2]++;
-		  break;
-		case "Dendro":
-		  elementsCount[3]++;
-		  break;
-		case "Anemo":
-		  elementsCount[4]++;
-		  break;
-		case "Geo":
-		  elementsCount[5]++;
-		  break;
-		case "Cryo":
-		  elementsCount[6]++;
-		  break;
-	  }
-	}
-	//when page loads
-  
-	$(".grid-cont").css("grid-template-columns", "auto auto auto auto");
 	let myElementsCount = [0, 0, 0, 0, 0, 0];
-  
 	var score = 0;
+	var maxScore = 160;
+	var penalty = 0;
 	let elementId = 0;
-	while(elementsCount[elementId] == 0)
-	{
-	   elementId++;
-	}
-	$(".prompt").append(
-	  `<h2> Find all ` +
-		elements[elementId] +
-		`</h2>` +
-		`<img src="Images/general stuff/` +
-		elementImages[elementId] +
-		`" alt="">` +
-		`<h2> characters</h2>`
-	);
+	var len = charactersInfo.length;
 
-	$(".grid-item").click(function () {
-		console.log(elementsCount[elementId]);
-	  var selectedId = this.id;
-	  if (charactersInfo[selectedId].element == elements[elementId]) {
-		$("#" + selectedId + " img").attr(
-		  "src",
-		  "Images/general stuff/" + elementImages[elementId]
+	var play = true;
+  
+
+	/* Generate Grid */
+	if(play)
+	{
+		let chars = new Set();
+		while(chars.size !== 16) {
+			chars.add(Math.floor(Math.random() * (len - 1)) + 1);
+		}
+		let elementsCount = [0, 0, 0, 0, 0, 0, 0];
+	
+		for (id of chars) {
+		$(".grid-cont").append(
+			`<div class="grid-item"` +
+			`id="` +
+			id +
+			`">
+				<img src="Images/Character Icons/` +
+			charactersInfo[id].image +
+			`" alt="">
+		</div>`
 		);
-		score += 10;
-		$("#score").text("Score: " + score);
-		myElementsCount[elementId]++;
-		if (myElementsCount[elementId] == elementsCount[elementId] ) {
-	 
-			elementId++;
-		 if(elementsCount[elementId] == 0)
-		 {
-			elementId++;
-		 }
-		  $(".prompt").html(
-			`<h2> Find all ` +
-			  elements[elementId] +
-			  `</h2>` +
-			  `<img src="Images/general stuff/` +
-			  elementImages[elementId] +
-			  `" alt="">` +
-			  `<h2> characters</h2>`
-		  );
+
+		/* count num of characters of each element */
+		switch (charactersInfo[id].element) {
+			case "Pyro":
+			elementsCount[0]++;
+			break;
+			case "Hydro":
+			elementsCount[1]++;
+			break;
+			case "Electro":
+			elementsCount[2]++;
+			break;
+			case "Dendro":
+			elementsCount[3]++;
+			break;
+			case "Anemo":
+			elementsCount[4]++;
+			break;
+			case "Geo":
+			elementsCount[5]++;
+			break;
+			case "Cryo":
+			elementsCount[6]++;
+			break;
+		}
+		}
+
+
+		/*when page loads*/
+		$(".grid-cont").css("grid-template-columns", "auto auto auto auto");
+		
+		while(elementsCount[elementId] == 0)
+		{
+		elementId++;
+		}
+		$(".prompt").append(
+		`<h2> Find all ` +
+			elements[elementId] +
+			`</h2>` +
+			`<img src="Images/general stuff/` +
+			elementImages[elementId] +
+			`" alt="">` +
+			`<h2> characters</h2>`
+		);
+
+		$(".grid-item").click(function () {
+			console.log(elementsCount[elementId]);
+		var selectedId = this.id;
+		if (charactersInfo[selectedId].element == elements[elementId]) {
+			$("#" + selectedId + " img").attr(
+			"src",
+			"Images/general stuff/" + elementImages[elementId]
+			);
+			score += 10;
+			$("#score").text("Score: " + score);
+
+			myElementsCount[elementId]++;
+			if (myElementsCount[elementId] == elementsCount[elementId] ) {
+				elementId++;
+			if(elementsCount[elementId] == 0)
+			{
+				elementId++;
+			}
+			$(".prompt").html(
+				`<h2> Find all ` +
+				elements[elementId] +
+				`</h2>` +
+				`<img src="Images/general stuff/` +
+				elementImages[elementId] +
+				`" alt="">` +
+				`<h2> characters</h2>`
+			);
+			}
+		}
+		else{
+			if(score - 10 >= 0){
+				score -= 10;
+				maxScore -= 10;
+				penalty += 10;
+				console.log(penalty + "\n");
+			}
+		}
+		if (score == maxScore){
+			play = false;
+			$("h2").remove();
+			$("img").remove();
+			$(".grid-cont").html("<h1> WIN </h1>");
+			$('.grid-cont').append('<button class = "button" onclick="location.reload();" id="reload" >Play Again</button>');
+			$(".grid-cont").css({"height":"400px",'background-image':'url("Images/confetti-10.gif")', "flex-direction":"column", "grid-template-columns":"", "display":"flex"});
+		}
+		if(penalty >= 50)
+		{
+			play = false;
+			$("h2").remove();
+			$("img").remove();
+			$(".grid-cont").html("<h1> LOSE </h1>");
+			$('.grid-cont').append('<button class = "button" onclick="location.reload();" id="reload" >Play Again</button>');
+			$(".grid-cont").css({"height":"400px", "flex-direction":"column", "grid-template-columns":"", "display":"flex"});
+
+			//event bubbles up does not work properly; btw display penalty points too
 		}
 		
-	  }
-	  if (score == 160){
-		  $("h2").remove();
-		  $("img").remove();
-		  $(".grid-cont").html("<h1> WIN!!! </h1>");
-		  $(".grid-cont").css({"height":"400px",'background-image':'url("Images/confetti-10.gif")'});
-			//add replay
-	  }
-	});
+		});
+
+	}
+	
   });
   
