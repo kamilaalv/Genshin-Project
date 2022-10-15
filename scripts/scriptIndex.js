@@ -1,23 +1,20 @@
 /*Monthly Banner*/
 var characters = [
-  "Ayaka Wish2.png",
-  "Razor Wish2.png",
-  "Rosaria Wish2.png",
-  "Sayu Wish2.png",
+  "Nilou Wish2C.png",
+  "Albedo Wish2C.png",
+  "Beidou Wish2C.png",
 ];
-var backgrounds = ["AyakaBg.jpg", "RazorBg.jpg", "RosariaBg.jpg", "SayuBg.jpg"];
-var h2s = ["Kamisato Ayaka", "Razor", "Rosaria", "Sayu"];
+var backgrounds = ["SumeruBgHydro.png", "MondstadtBgGeo.png", "LiyueBgElectro.png"];
+var h2s = ["Nilou", "Albedo", "Beidou"];
 var h1s = [
-  "Frostflake Heron",
-  "Wolf Boy",
-  "Thorny Benevolence",
-  "Mujina Ninja",
+  "Dance of LotusLight",
+  "Kreideprinz",
+  "Uncrowned Lord of the Ocean"
 ];
 var elements = [
-  "Element_CryoGlow.png",
+  "Element_HydroGlow.png",
+  "Element_GeoGlow.png",
   "Element_ElectroGlow.png",
-  "Element_CryoGlow.png",
-  "Element_AnemoGlow.png",
 ];
 
 function changeBanner(ind) {
@@ -28,7 +25,7 @@ function changeBanner(ind) {
   var element = document.querySelector(".currentElement");
   var star = document.querySelector(".lastStar");
 
-  for (i = 0; i < 4; i++) {
+  for (i = 0; i < 3; i++) {
     var selectionImg = document.querySelector("#" + CSS.escape(i) + " img");
     var selectedImgSpan = document.querySelector("#" + CSS.escape(i) + " .dot");
     if (i == ind) {
@@ -43,7 +40,7 @@ function changeBanner(ind) {
   character.src = "Images/Character Icons/" + characters[ind];
   element.src = "Images/general stuff/" + elements[ind];
   background.style.backgroundImage =
-    "url('Images/Character Icons/" + backgrounds[ind] + "')";
+    "url('Images/general stuff/Bg/" + backgrounds[ind] + "')";
 
   h1.innerHTML = h1s[ind];
   h2.innerHTML = h2s[ind];
