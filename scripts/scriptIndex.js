@@ -37,7 +37,7 @@ function changeBanner(ind) {
     }
   }
 
-  character.src = "Images/Character Icons/" + characters[ind];
+  character.src = "Images/Character Icons/Wish/" + characters[ind];
   element.src = "Images/general stuff/" + elements[ind];
   background.style.backgroundImage =
     "url('Images/general stuff/Bg/" + backgrounds[ind] + "')";
