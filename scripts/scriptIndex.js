@@ -280,6 +280,13 @@ let charactersInfo = [
     star: 5,
   },
   {
+    name: "Nilou",
+    image: "Nilou.png",
+    element: "Hydro",
+    weapon: "Sword",
+    star: 5,
+  },
+  {
     name: "Ningguang",
     image: "Ningguang.png",
     element: "Geo",
