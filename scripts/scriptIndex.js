@@ -1,8 +1,8 @@
 /*Monthly Banner*/
 var characters = [
-  "Nilou Wish2C.png",
-  "Albedo Wish2C.png",
-  "Beidou Wish2C.png",
+  "Nilou",
+  "Albedo",
+  "Beidou",
 ];
 var backgrounds = ["SumeruBgHydro.png", "MondstadtBgGeo.png", "LiyueBgElectro.png"];
 var h2s = ["Nilou", "Albedo", "Beidou"];
@@ -37,7 +37,7 @@ function changeBanner(ind) {
     }
   }
 
-  character.src = "Images/Character Icons/Wish/" + characters[ind];
+  character.src = "Images/Character Icons/Wish/CharaCter_" + characters[ind]+"_Full_Wish1.png";
   element.src = "Images/general stuff/" + elements[ind];
   background.style.backgroundImage =
     "url('Images/general stuff/Bg/" + backgrounds[ind] + "')";
@@ -451,7 +451,7 @@ for (i = 0; i < charactersInfo.length; i++) {
   if (charactersInfo[i].star == 4) {
     characterGrid.innerHTML +=
       `<div class="grid-item">
-  <a href="`+ charactersInfo[i].name  +`.html">
+  <a href=character.php?name="`+charactersInfo[i].name  +`>
       <img style="background-image:url( 'Images/general stuff/Background_Item_4_Star.webp');" src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">
@@ -467,7 +467,7 @@ for (i = 0; i < charactersInfo.length; i++) {
     else if(charactersInfo[i].star == 5){
       characterGrid.innerHTML +=
       `<div class="grid-item">
-      <a href="`+ charactersInfo[i].name  +`.html">
+      <a href=character.php?name="`+charactersInfo[i].name  +`>
       <img src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">
