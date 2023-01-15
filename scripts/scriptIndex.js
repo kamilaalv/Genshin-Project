@@ -59,13 +59,7 @@ let charactersInfo = [
     weapon: "Sword",
     star: 5,
   },
-  {
-    name: "Aloy",
-    image: "Aloy.png",
-    element: "Cryo",
-    weapon: "Bow",
-    star: 4,
-  },
+  
   {
     name: "Amber",
     image: "Amber.png",
@@ -200,7 +194,7 @@ let charactersInfo = [
     star: 4,
   },
   {
-    name: "Hu Tao",
+    name: "Hu_Tao",
     image: "HuTao.png",
     element: "Pyro",
     weapon: "Polearm",
@@ -256,7 +250,7 @@ let charactersInfo = [
     star: 5,
   },
   {
-    name: "Kuki Shinobu",
+    name: "Kuki_Shinobu",
     image: "Kuki.png",
     element: "Electro",
     weapon: "Sword",
@@ -403,7 +397,7 @@ let charactersInfo = [
     star: 4,
   },
   {
-    name: "Yae Miko",
+    name: "Yae_Miko",
     image: "YaeMiko.png",
     element: "Electro",
     weapon: "Catalyst",
@@ -431,7 +425,7 @@ let charactersInfo = [
     star: 5,
   },
   {
-    name: "Yun Jin",
+    name: "Yun_Jin",
     image: "YunJin.png",
     element: "Geo",
     weapon: "Polearm",

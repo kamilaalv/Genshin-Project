@@ -1,3 +1,9 @@
+<?php 
+    require 'info.php';
+    if(isset($_GET)){
+      extract($_GET);
+      $bg = $chBio[$name]["region"] . "Bg" . $chBio[$name]["element"];
+    }?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +23,12 @@
 
     <title>Genshin | Ultimate Character Ascension Guide</title>
   </head>
+  <style>
+    .monthlyBanner {
+    background-image: url("Images/general stuff/Bg/<?php echo $bg; ?>.png");
+   
+  }
+  </style>
   <body>
     <!--Logo-->
     <div class="logo flex">
@@ -36,10 +48,7 @@
       </div>
     </div>
 
-    <?php if(isset($_GET)){
-      extract($_GET);
-     
-    }?>
+   
 
     <!--Banner-->
     <div class="monthlyBanner">
@@ -50,26 +59,25 @@
           id="currentBannerCharacter"
         />
         <div class="characterNamecard">
+         
           <img
             class="currentElement"
-            src="Images/general stuff/Element_CryoGlow.png"
+            src="Images/general stuff/Element_<?php echo $chBio[$name]["element"]; ?>Glow.png"
             alt=""
           />
-          <h2>Eula</h2>
+          <h2><?php echo implode(" ",explode("_",$name)); ?></h2>
           <div class="characterNamecardBg">
             <div class="characterNamecardStars flex">
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img
-                src="Images/general stuff/Icon_1_Star.webp"
-                alt=""
-              />
+              <?php 
+              $star = $chBio[$name]["star"];
+              for($i = 0; $i < $star; $i++){
+                echo "<img src='Images/general stuff/Icon_1_Star.webp' alt='' />";
+              }
+?>
             </div>
           </div>
         </div>
-        <h1>Dance of the Shimmering Wave</h1>
+        <h1><?php echo $chBio[$name]["alias"]; ?></h1>
       </div>
     </div>
     <!-- CHARACTER INFO -->
