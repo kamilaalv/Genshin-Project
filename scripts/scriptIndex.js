@@ -451,7 +451,7 @@ for (i = 0; i < charactersInfo.length; i++) {
   if (charactersInfo[i].star == 4) {
     characterGrid.innerHTML +=
       `<div class="grid-item">
-  <a href=character.php?name="`+charactersInfo[i].name  +`>
+  <a href=character.php?name=`+charactersInfo[i].name  +`>
       <img style="background-image:url( 'Images/general stuff/Background_Item_4_Star.webp');" src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">
@@ -467,7 +467,7 @@ for (i = 0; i < charactersInfo.length; i++) {
     else if(charactersInfo[i].star == 5){
       characterGrid.innerHTML +=
       `<div class="grid-item">
-      <a href=character.php?name="`+charactersInfo[i].name  +`>
+      <a href=character.php?name=`+charactersInfo[i].name  +`>
       <img src="Images/Character Icons/` +
       charactersInfo[i].image +
       `" alt="">

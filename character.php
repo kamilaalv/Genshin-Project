@@ -28,19 +28,24 @@
       <div class="container flex">
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="characters.html">Characters</a></li>
-            <li><a href="game.html">Game</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="characters.php">Characters</a></li>
+            <li><a href="game.php">Game</a></li>
           </ul>
         </nav>
       </div>
     </div>
 
+    <?php if(isset($_GET)){
+      extract($_GET);
+     
+    }?>
+
     <!--Banner-->
     <div class="monthlyBanner">
       <div class="flex">
         <img
-          src="Images/Character Icons/Wish/Character_Eula_Full_Wish1.png"
+          src="Images/Character Icons/Wish/Character_<?php echo $name; ?>_Full_Wish1.png"
           alt=""
           id="currentBannerCharacter"
         />
