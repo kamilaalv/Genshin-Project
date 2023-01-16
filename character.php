@@ -26,7 +26,9 @@
   <style>
     .monthlyBanner {
     background-image: url("Images/general stuff/Bg/<?php echo $bg; ?>.png");
-   
+  }
+  .character-banner .char img:nth-of-type(1),  .character-banner .char img:nth-of-type(2) {
+    background-image: url("Images/general stuff/Background_Item_<?php echo $chBio[$name]["star"];?>_Star.webp");
   }
   </style>
   <body>
@@ -86,28 +88,24 @@
         <div class="showcase">
           <div class="character-banner">
             <div class="char flex">
-              <img src="Images/Character Icons/Eula.png" alt="" />
-              <img src="Images/general stuff/Element_CryoGlow.png" alt="" />
+              <img src="Images/Character Icons/<?php echo $name; ?>.png" alt="" />
+              <img src="Images/general stuff/Element_<?php echo $chBio[$name]["element"]; ?>Glow.png" alt="" />
             </div>
-              <h2>Eula</h2>
+              <h2><?php echo $name; ?></h2>
             <div class="Estars flex">
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img src="Images/general stuff/Icon_1_Star.webp" alt="" />
-              <img
-                class="lastStar"
-                src="Images/general stuff/Icon_1_Star.webp"
-                alt=""
-              />
+            <?php 
+              $star = $chBio[$name]["star"];
+              for($i = 0; $i < $star; $i++){
+                echo "<img src='Images/general stuff/Icon_1_Star.webp' alt='' />";
+              }?>
             </div>
-            <h2 class="ewh2 label">Claymore</h2>
+            <h2 class="ewh2 label"><?php echo $chBio[$name]["weapon"]?></h2>
             <div class="characterBio">
-                  <div class="label">Name</div><div class="value">Eula Lawrence</div>
-                  <div class="label">Birthday</div><div class="value">October 25th</div>
-                  <div class="label">Region</div><div class="value">Mondstadt</div> 
-                  <div class="label">MBTI</div><div class="value">ENTJ</div> 
-                  <div class="label">Zodiac Sign </div><div class="value"> Scorpio</div> 
+                  <div class="label">Name/Alias</div><div class="value"><?php echo $chBio[$name]["fullName"];?></div>
+                  <div class="label">Birthday</div><div class="value"><?php echo $chBio2[$name]["bd"]; ?></div>
+                  <div class="label">Region</div><div class="value"><?php echo $chBio[$name]["region"];?></div> 
+                  <div class="label">MBTI</div><div class="value"><?php echo $chBio2[$name]["mbti"]; ?></div> 
+                  <div class="label">Zodiac Sign </div><div class="value"><?php echo $chBio2[$name]["zodiac"]; ?></div> 
             </div>
           </div>
         </div>
