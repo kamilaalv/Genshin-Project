@@ -302,7 +302,29 @@
       </div>
     </div>
 
-    <div class="flex grid-cont"></div>
+    <div class="flex grid-cont">
+      <?php 
+      require "info.php";
+    
+     foreach($chBio as $name=>$info){
+       if ($info["star"] == 4) {
+         echo"<div class=\"grid-item\">";
+        echo"<a href=character.php?name=`".$name."`>";
+        echo"<img style=\"background-image:url( 'Images/general stuff/Background_Item_4_Star.webp');\" src=\"Images/Character Icons/".$name.".png\" alt=\"\">";
+        echo"<img style=\"background-image:url( 'Images/general stuff/Background_Item_4_Star.webp');\" src=\"Images/general stuff/Element_".$info["element"].".png\" alt=\"\">";
+        echo"<h2>".implode(" ",explode("_",$name))."</h2> </a> </div>";
+        }
+        else {
+          echo"<div class=\"grid-item\">";
+          echo"<a href=character.php?name=`".$name."`>";
+          echo"<img src=\"Images/Character Icons/".$name.".png\" alt=\"\">";
+          echo"<img src=\"Images/general stuff/Element_".$info["element"].".png\" alt=\"\">";
+          echo"<h2>".implode(" ",explode("_",$name))."</h2> </a> </div>";
+          }
+      }
+      ?>
+   
+    </div>
 
     <!-- Parralax-->
     <div

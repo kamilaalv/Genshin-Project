@@ -91,7 +91,7 @@
               <img src="Images/Character Icons/<?php echo $name; ?>.png" alt="" />
               <img src="Images/general stuff/Element_<?php echo $chBio[$name]["element"]; ?>Glow.png" alt="" />
             </div>
-              <h2><?php echo $name; ?></h2>
+              <h2><?php echo implode(" ",explode("_",$name)); ?></h2>
             <div class="Estars flex">
             <?php 
               $star = $chBio[$name]["star"];

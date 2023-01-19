@@ -1,20 +1,14 @@
 
 
   let charactersInfo = [
-	{
+	/*{
 	  name: "Albedo",
 	  image: "Albedo.png",
 	  element: "Geo",
 	  weapon: "Sword",
 	  star: 5,
-	},
-	{
-	  name: "Aloy",
-	  image: "Aloy.png",
-	  element: "Cryo",
-	  weapon: "Bow",
-	  star: 4,
-	},
+	},*/
+	
 	{
 	  name: "Amber",
 	  image: "Amber.png",
@@ -121,6 +115,13 @@
 	  star: 5,
 	},
 	{
+	  name: "Faruzan",
+	  image: "Faruzan.png",
+	  element: "Anemo",
+	  weapon: "Bow",
+	  star: 4,
+	},
+	{
 	  name: "Fischl",
 	  image: "Fischl.png",
 	  element: "Electro",
@@ -149,7 +150,7 @@
 	  star: 4,
 	},
 	{
-	  name: "Hu Tao",
+	  name: "Hu_Tao",
 	  image: "HuTao.png",
 	  element: "Pyro",
 	  weapon: "Polearm",
@@ -205,9 +206,16 @@
 	  star: 5,
 	},
 	{
-	  name: "Kuki Shinobu",
+	  name: "Kuki_Shinobu",
 	  image: "Kuki.png",
 	  element: "Electro",
+	  weapon: "Sword",
+	  star: 4,
+	},
+	{
+	  name: "Layla",
+	  image: "Layla.png",
+	  element: "Cryo",
 	  weapon: "Sword",
 	  star: 4,
 	},
@@ -226,12 +234,12 @@
 	  star: 5,
 	},
 	{
-		name: "Nilou",
-		image: "Nilou.png",
-		element: "Hydro",
-		weapon: "Sword",
-		star: 5,
-	  },
+	  name: "Nilou",
+	  image: "Nilou.png",
+	  element: "Hydro",
+	  weapon: "Sword",
+	  star: 5,
+	},
 	{
 	  name: "Ningguang",
 	  image: "Ningguang.png",
@@ -324,6 +332,13 @@
 	  star: 5,
 	},
 	{
+	  name: "Wanderer",
+	  image: "Wanderer.png",
+	  element: "Anemo",
+	  weapon: "Catalyst",
+	  star: 5,
+	},
+	{
 	  name: "Xiangling",
 	  image: "Xiangling.png",
 	  element: "Pyro",
@@ -352,7 +367,7 @@
 	  star: 4,
 	},
 	{
-	  name: "Yae Miko",
+	  name: "Yae_Miko",
 	  image: "YaeMiko.png",
 	  element: "Electro",
 	  weapon: "Catalyst",
@@ -380,19 +395,19 @@
 	  star: 5,
 	},
 	{
-	  name: "Yun Jin",
+	  name: "Yun_Jin",
 	  image: "YunJin.png",
 	  element: "Geo",
 	  weapon: "Polearm",
 	  star: 4,
 	},
-	{
+    {
 	  name: "Zhongli",
 	  image: "Zhongli.png",
 	  element: "Geo",
 	  weapon: "Polearm",
 	  star: 5,
-	},
+	}
   ];
 
    /* MY PROJECT GAME */
