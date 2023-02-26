@@ -50,9 +50,6 @@ function changeBanner(ind) {
 }
 
 /* Grid Characters */
-
-
-
 var characterGrid = document.querySelector(".grid-cont");
 var numOfCols = Math.floor(($(window).width() * 0.7) / 126);
 gridTemplColStyle = "";

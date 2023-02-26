@@ -113,19 +113,14 @@
         <!--Character Ascension Menu-->
         <div class="showcase">
           <nav class="ascensionMenu flex">
-            <button  title="lvl" onclick="" class="stat flex selected" id="lvl">
-              <img src="Images/general stuff/Item_Heros_Wit.webp" alt="">
-                <span> Level</span>
-             </button>
+            <button title="artifacts" onclick="" class="stat flex" id="artifacts">
+              <img src="Images/artifacts/Item_Stainless_Bloom.webp" alt="">
+              <span>Artifacts</span>
+            </button>
             <button title="talents" onclick="" class="stat flex" id="talents">
               <img src="Images/Material icons/Item_Guide_to_Resistance.webp" alt="">
               <span> Talents</span>
              </button>
-            <button title="artifacts" onclick="" class="stat flex" id="artifacts">
-              <img src="Images/artifacts/Item_Stainless_Bloom.webp" alt="">
-              <span>Artifacts</span>
-              
-            </button>
             <button title="weapons" onclick="" class="stat flex" id="weapons">
               <img src="Images/Weapon icons/Claymore png/Weapon_Song_of_Broken_Pines_2nd.png" alt="">
               <span> Weapons</span>
@@ -133,6 +128,10 @@
             <button title="constellation" onclick="" class="stat flex" id="constellation">
               <img src="Images/general stuff/Item_Stella_Fortuna_5.webp" alt="">
               <span> Constellation</span>
+             </button>
+             <button  title="lvl" onclick="" class="stat flex selected" id="lvl">
+              <img src="Images/general stuff/Item_Heros_Wit.webp" alt="">
+                <span>Teams</span>
              </button>
           </nav>
 

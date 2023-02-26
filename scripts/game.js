@@ -1,13 +1,13 @@
 
 
   let charactersInfo = [
-	/*{
+	{
 	  name: "Albedo",
 	  image: "Albedo.png",
 	  element: "Geo",
 	  weapon: "Sword",
 	  star: 5,
-	},*/
+	},
 	
 	{
 	  name: "Amber",
@@ -151,7 +151,7 @@
 	},
 	{
 	  name: "Hu_Tao",
-	  image: "HuTao.png",
+	  image: "Hu_Tao.png",
 	  element: "Pyro",
 	  weapon: "Polearm",
 	  star: 5,
@@ -207,7 +207,7 @@
 	},
 	{
 	  name: "Kuki_Shinobu",
-	  image: "Kuki.png",
+	  image: "Kuki_Shinobu.png",
 	  element: "Electro",
 	  weapon: "Sword",
 	  star: 4,
@@ -368,7 +368,7 @@
 	},
 	{
 	  name: "Yae_Miko",
-	  image: "YaeMiko.png",
+	  image: "Yae_Miko.png",
 	  element: "Electro",
 	  weapon: "Catalyst",
 	  star: 5,
@@ -396,7 +396,7 @@
 	},
 	{
 	  name: "Yun_Jin",
-	  image: "YunJin.png",
+	  image: "Yun_Jin.png",
 	  element: "Geo",
 	  weapon: "Polearm",
 	  star: 4,
